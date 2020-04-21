@@ -188,7 +188,7 @@ def user_stats(df):
         min_bday_counter = sum(1 if x == min_bday else 0 for x in df["Birth Year"])
         print("The earliest year of birth is {}, with {} occurrences.".format(int(min_bday), min_bday_counter))
         old_counter = sum(1 if x <= 1917 else 0 for x in df["Birth Year"])
-        print(    "* Note: This data contains {} entries of people over age 100, suggesting that the data may not be exact".format(old_counter))
+        print("    * Note: This data contains {} entries of people over age 100, suggesting that the data may not be exact".format(old_counter))
 
         max_bday = df["Birth Year"].max()
         max_bday_counter = sum(1 if x == max_bday else 0 for x in df["Birth Year"])
